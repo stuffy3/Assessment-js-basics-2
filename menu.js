@@ -31,7 +31,14 @@
 */
 
 //CODE HERE
-
+const pizza = {
+    name: "pep",
+    price: 12,
+    category: "Meat",
+    popularity: 4,
+    rating: 4,
+    tags: ['pizza', 'hot', 'delicious'],
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,7 +50,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity);
 
 /*
     Second, log the second tag in your pizza's
@@ -53,7 +60,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -63,7 +70,8 @@
 */
 
 //CODE HERE
-
+let {price} = pizza
+console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -73,7 +81,8 @@
 */
 
 //CODE HERE
-
+let {category} = pizza;
+console.log(category);
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -89,7 +98,48 @@
 
 //CODE HERE
 
-
+let food = [ 
+    {
+        name: "pep",
+        price: 12,
+        category: "meat",
+        popularity: 4,
+        rating: 4,
+        tags: ["cheese", "meat"]
+    },
+    {
+        name: "cheese",
+        price: 10,
+        category: "plain",
+        popularity: 4,
+        rating: 5,
+        tags: ['cheese'],
+    },
+    {
+        name: "pine",
+        price: 11,
+        category: "fruit",
+        popularity: 1,
+        rating: 1,
+        tags: ["fruit", "cheese"],
+    },
+    {
+        name: "sausage",
+        price: 13,
+        category: "meat",
+        popularity: 5,
+        rating: 4,
+        tags: ["cheese", "meat"],
+    },
+    {
+        name: "dessert",
+        price: 12,
+        category: "Sweet",
+        popularity: 4,
+        rating: 10,
+        tags: ["fruit", "sweet"]
+    }
+]
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -104,10 +154,14 @@
 */
 
 //CODE HERE
+let filterCheese = (tag) => {
+    if(food.tags.includes("cheese") === tag)
+    return food.name
+}
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
-
+filterCheese('cheese');
+console.log(filterCheese)
 
 //////////////////PROBLEM 5////////////////////
 /* 

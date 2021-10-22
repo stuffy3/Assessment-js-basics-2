@@ -30,6 +30,14 @@
 */
 
 //CODE HERE
+class Tickets {
+    constructor(
+        items,
+        orderTime,
+        customerId
+    )
+}
+    
 
 
 
