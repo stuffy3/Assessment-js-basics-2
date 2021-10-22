@@ -100,15 +100,15 @@ console.log(category);
 
 let food = [ 
     {
-        name: "pep",
+        name: "Pep",
         price: 12,
         category: "meat",
         popularity: 4,
         rating: 4,
-        tags: ["cheese", "meat"]
+        tags: ["cheese", "meat"],
     },
     {
-        name: "cheese",
+        name: "Cheese",
         price: 10,
         category: "plain",
         popularity: 4,
@@ -116,7 +116,7 @@ let food = [
         tags: ['cheese'],
     },
     {
-        name: "pine",
+        name: "Pine",
         price: 11,
         category: "fruit",
         popularity: 1,
@@ -124,7 +124,7 @@ let food = [
         tags: ["fruit", "cheese"],
     },
     {
-        name: "sausage",
+        name: "Sausage",
         price: 13,
         category: "meat",
         popularity: 5,
@@ -132,7 +132,7 @@ let food = [
         tags: ["cheese", "meat"],
     },
     {
-        name: "dessert",
+        name: "Dessert",
         price: 12,
         category: "Sweet",
         popularity: 4,
@@ -154,6 +154,19 @@ let food = [
 */
 
 //CODE HERE
+const findTags = (arr, tag, callback) => {
+    arr.forEach(arr =>  {
+        for(i = 0; i <= arr.tags.length -1; i++)
+      if (arr.tags[i] === tag) {
+        return callback(arr)
+    
+      }
+    })
+  }
+  
+findTags(food, 'fruit', pizza => {
+    console.log(pizza.name)
+})
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -195,8 +208,16 @@ let food = [
 */
 
 //CODE HERE
-
-
+const filterByProperty = (property, number, type) => {
+    const filteredFood = food.filter((ele) => {
+        if(type === "above") {
+            return ele[property] >= number;
+        } else if(type === "below") {
+            return ele[property] <= number;
+        }
+    })
+    return filteredFood;
+}
 /*
     Invoke the `filterByProperty` function passing
     in a value for each paramter.
@@ -205,3 +226,5 @@ let food = [
 */
 
 //CODE HERE
+let filt = filterByProperty("price", 11, 'below') 
+console.log(filt)
