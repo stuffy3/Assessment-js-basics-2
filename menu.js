@@ -154,14 +154,6 @@ let food = [
 */
 
 //CODE HERE
-let filterCheese = (tag) => {
-    if(food.tags.includes("cheese") === tag)
-    return food.name
-}
-
-
-filterCheese('cheese');
-console.log(filterCheese)
 
 //////////////////PROBLEM 5////////////////////
 /* 
