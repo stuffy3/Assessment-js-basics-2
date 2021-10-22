@@ -129,6 +129,8 @@ let newDeals = deals.map(element => {
     return element.title.replace("15% Off", '10%Off')
     })
  console.log(newDeals)
+//added line 133 during review
+ deals[0].title = deals[0].title.replace('15', '10')
 
 /*
     The restaurant is going to continue its
