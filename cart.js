@@ -35,9 +35,9 @@ const cart = [
 
 //CODE HERE
 
-const summedPrice = cart.reduce(acc, element => {
- return acc + element
-});
+const summedPrice = cart.reduce((acc, element) => {
+ return  acc + element.price
+}, 0);
 console.log(summedPrice)
 
 //////////////////PROBLEM 2////////////////////
@@ -56,9 +56,13 @@ console.log(summedPrice)
 */
 
 //CODE HERE
+const calcFinalPrice = (cartTotal, tax, couponValue) => {
+    let calcTax = cartTotal * ((100 + tax) / 100)
+    return  calcTax - couponValue
+}
 
-
-
+let money = calcFinalPrice(10, .6, 2)
+console.log(money)
 //////////////////PROBLEM 3////////////////////
 /*  
     In this problem, you'll create a model for 
@@ -81,7 +85,10 @@ console.log(summedPrice)
 
 /*
     TEXT ANSWER HERE
-
+Customer should have 4 properties
+name, age, favorite food, allergie
+name, favorite food and allergie will all be Strings due to the massive amount of variety in customers answers, strings will be easy to seperate and place into arrays for further data analysis
+age will be a Number, this will allow the resturaunt to calculate the average age of the customer
 */
 
 /*
@@ -90,3 +97,10 @@ console.log(summedPrice)
 */
 
 //CODE HERE
+
+const customer = {
+    name: "Bob",
+    age: 65,
+    favoriteFood: "Burger",
+    allergies: "Ham",
+}
